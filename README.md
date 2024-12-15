@@ -1,15 +1,13 @@
-# 1. 配置环境
-- 安装webotsR2023b版本
-- 打开webots，在webots_world文件夹下选择对应的世界文件
-- 在webots_controller文件夹下选择对应的leader控制器
-- 设置follower控制器为extern
-- 
-# 2. 配置测试脚本
+# 1. Environment Setup
+- Install Webots R2023b version.
+- Open Webots and select the appropriate world file under the `webots_world` folder.
+- Choose the corresponding leader controller under the `webots_controller` folder.
+- Set the follower controller to extern.
 
-- 测试之前需要修改配置文件：env_config_x.yaml，主要修改测试world名字为相应的world名字，
-- 在env_config_x配置相应参数，如use_random_mask等。
-# 启动脚本
-- 在终端输入命令：
-```
-python ppo_test.py
-```
+# 2. Configure Test Script
+
+- Before testing, modify the configuration file: `env_config_x.yaml`, mainly change the test world name to the corresponding world name.
+- Configure the relevant parameters in `env_config_x`, such as `use_random_mask`.
+
+# Launch Script
+- Enter the following command in the terminal:
