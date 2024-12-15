@@ -1,0 +1,160 @@
+action_dim: 7
+action_shape: 3
+action_space: discrete
+apartment:
+  follower:
+    rotation:
+    - -0.0
+    - 0.000180808
+    - 1.0
+    - 0.0
+    translation:
+    - -8.5
+    - -4.5
+    - 0.103
+  leader:
+    rotation:
+    - -0.0
+    - -0.0
+    - -1
+    - 0.0
+    translation:
+    - -7.0
+    - -4.5
+    - 0.103
+aux_task: false
+batch_size: 100000
+city:
+  follower:
+    rotation:
+    - 0.
+    - 0
+    - 1
+    - 0.0
+    translation:
+    - -43
+    - 45
+    - 0.094442
+  leader:
+    rotation:
+    - -0.000
+    - -0.0
+    - 1
+    - 0.00
+    translation:
+    - -41.5
+    - 45.0
+    - 0.0940928
+config_file: env_config_2
+delta_angle: 0.15
+delta_x: 0.05
+delta_y: 0.05
+desired_angle: 0.0
+desired_x_distance: 1.5
+desired_y_distance: 0.0
+device: cuda
+done_delta_angle: 0.5
+done_delta_distance: 0.3
+entropy_coef: 0.01
+env_name: apartment
+epsilon: 0.2
+eval_epiosde_freq: 500
+eval_times: 3
+follower_high_bound:
+- 0.5
+- 0.5
+- 0.2
+follower_low_bound:
+- -0.5
+- -0.5
+- -0.2
+gamma: 0.99
+hall:
+  follower:
+    rotation:
+    - 0
+    - 0
+    - -1
+    - 1.5708
+    translation:
+    - -1.5
+    - 7.5
+    - 0.100528
+  leader:
+    rotation:
+    - 0
+    - 0
+    - -1
+    - 1.5708
+    translation:
+    - -1.5
+    - 6
+    - 0.100183
+k_epochs: 10
+lamda: 0.95
+leader_high_bound:
+- 0.2
+- 0.2
+- 0.1
+leader_low_bound:
+- -0.2
+- -0.2
+- -0.1
+lr_actor: 0.0003
+lr_critic: 0.0003
+max_action: 1.0
+max_camera_noise: 0.1
+max_episode_steps: 250
+max_train_steps: 3000000.0
+mini_batch_size: 32
+observation_shape:
+  channel: 1
+  height: 120
+  width: 210
+observation_type: color_image
+reward_type: ln
+seed: 10
+set_adam_eps: true
+state_dim: 6
+test_each_episode_steps: 500
+total_episodes: 100
+use_adv_norm: true
+use_done_delta: true
+use_grad_clip: true
+use_greedy: true
+use_lr_decay: true
+use_orthogonal_init: true
+use_random_mask: false
+use_reward_norm: false
+use_reward_scaling: false
+use_state_norm: false
+use_snow: false
+snow_severity: 1.0
+use_tanh: true
+warm_up_size: 5000
+wheel_names:
+- fl_wheel_motor
+- fr_wheel_motor
+- rl_wheel_motor
+- rr_wheel_motor
+zhiyan:
+  follower:
+    rotation:
+    - -0.0
+    - -0.0
+    - 1
+    - -0.
+    translation:
+    - -1.5
+    - 0
+    - 0.100183
+  leader:
+    rotation:
+    - 0
+    - 0
+    - 1
+    - 0
+    translation:
+    - 0.0
+    - -0.0
+    - 0.100183

@@ -1,0 +1,8 @@
+*.png
+*.jpg
+*grad*
+ppo_atari_lstm.py
+random_occlusion.py
+ppo_train.py
+train_logs/
+test_logs/

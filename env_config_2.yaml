@@ -1,0 +1,169 @@
+---
+config_file: 'env_config_2'
+aux_task: False
+wheel_names: 
+  - 'fl_wheel_motor'
+  - 'fr_wheel_motor'
+  - 'rl_wheel_motor'
+  - 'rr_wheel_motor'
+
+observation_type: 'color_image'
+# reward_type: 'linear_errors'
+reward_type: 'ln'
+observation_shape:
+  channel: 3
+  width: 210
+  height: 120
+action_shape: 3
+max_episode_steps: 250
+desired_x_distance: 1.5
+desired_y_distance: 0.0
+desired_angle: 0.0
+delta_x: 0.05
+delta_y: 0.05
+delta_angle: 0.15
+follower_low_bound:
+  - -0.5
+  - -0.5
+  - -0.2
+leader_low_bound:
+  - -0.2
+  - -0.2
+  - -0.1
+follower_high_bound:
+  - 0.5
+  - 0.5
+  - 0.2
+leader_high_bound:
+  - 0.2
+  - 0.2
+  - 0.1
+
+  # train and model parms
+action_space: discrete
+seed: 10
+eval_epiosde_freq: 500
+eval_times: 3
+state_dim: 6
+action_dim: 7
+max_action: 1.0
+max_train_steps: 3.0e+6
+batch_size: 100000
+mini_batch_size: 32
+lr_actor: 3.0e-4
+lr_critic: 3.0e-4
+gamma: 0.99
+lamda: 0.95
+epsilon: 0.2
+k_epochs: 10
+use_adv_norm: True
+use_state_norm: False
+use_reward_norm: False
+use_reward_scaling: False
+entropy_coef: 0.01
+use_lr_decay: True
+use_grad_clip: True
+use_orthogonal_init: True
+set_adam_eps: True
+use_tanh: True
+device: cuda
+warm_up_size: 5000
+done_delta_distance: 0.3
+done_delta_angle: 0.5
+use_done_delta: True
+total_episodes: 100
+max_camera_noise: 0.15
+use_random_mask: True
+use_greedy: True
+env_name: zhiyan
+test_each_episode_steps: 500
+zhiyan:
+  leader:
+    translation: 
+      - 0.0
+      - 1.76
+      - 0.100183
+    rotation: 
+      - -0.1811567821711096
+      - 0.37915640200991574
+      - 0.9074263843906591
+      - 0.015331029104798504
+  follower:
+    translation: 
+      - -1.5
+      - 1.76
+      - 0.100183
+    rotation: 
+      - -0.16617540677112785
+      - -0.9860875011929788
+      - 0.004144173673640147
+      - 0.02756472754243368
+city:
+  leader:
+    translation: 
+      - -41.0
+      - 45.0
+      - 0.0940928
+    rotation: 
+      - -0.00095553
+      - -0.0494055
+      - 0.998778
+      - 0.0027215
+  follower:
+    translation: 
+      - -42.5
+      - 45.0
+      - 0.094442
+    rotation: 
+      - 0.000333105
+      - -1.0
+      - 0.0
+      - 0.000134452
+hall:
+  leader:
+    translation: 
+      - -0.0819497
+      - 6.43309
+      - 0.100183
+    rotation: 
+      - -0.000137303
+      - -0.000151534
+      - -1
+      - 1.48779
+  follower:
+    translation: 
+      - -0.282142
+      - 7.84384
+      - 0.100528
+    rotation: 
+      - -0.00013883
+      - 0.000180808
+      - 1
+      - -1.309
+
+apartment:
+  leader:
+    translation: 
+      - -7.0
+      - -4.5
+      - 0.103
+    rotation: 
+      - -0.0
+      - -0.0
+      - -1
+      - 0.0
+  follower:
+    translation: 
+      - -8.5
+      - -4.5
+      - 0.103
+    rotation: 
+      - -0.00
+      - 0.000180808
+      - 1.0
+      - 0.0
+
+
+
+
+

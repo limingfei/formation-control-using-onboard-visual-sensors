@@ -1,0 +1,62 @@
+action_dim: 7
+action_shape: 3
+action_space: discrete
+aux_task: false
+batch_size: 2048
+config_file: config
+delta_angle: 0.15
+delta_x: 0.05
+delta_y: 0.05
+desired_angle: 0.0
+desired_x_distance: 1.5
+desired_y_distance: 0.0
+device: cuda
+entropy_coef: 0.01
+epsilon: 0.2
+eval_epiosde_freq: 200
+eval_times: 3
+follower_high_bound:
+- 0.5
+- 0.5
+- 0.2
+follower_low_bound:
+- -0.5
+- -0.5
+- -0.2
+gamma: 0.99
+k_epochs: 10
+lamda: 0.95
+leader_high_bound:
+- 0.2
+- 0.2
+- 0.1
+leader_low_bound:
+- -0.2
+- -0.2
+- -0.1
+lr_actor: 0.0003
+lr_critic: 0.0003
+lr_bc: 3.0e-4
+max_action: 1.0
+max_episode_steps: 500
+max_train_steps: 3000000.0
+mini_batch_size: 64
+observation_shape: 6
+observation_type: low_features
+reward_type: linear_errors
+seed: 10
+set_adam_eps: true
+state_dim: 6
+use_adv_norm: true
+use_grad_clip: true
+use_lr_decay: true
+use_orthogonal_init: true
+use_reward_norm: false
+use_reward_scaling: true
+use_state_norm: true
+use_tanh: true
+wheel_names:
+- fl_wheel_motor
+- fr_wheel_motor
+- rl_wheel_motor
+- rr_wheel_motor

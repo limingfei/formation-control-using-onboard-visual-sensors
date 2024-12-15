@@ -1,0 +1,43 @@
+mean: !!python/object/apply:numpy.core.multiarray._reconstruct
+  args:
+  - &id001 !!python/name:numpy.ndarray ''
+  - !!python/tuple
+    - 0
+  - !!binary |
+    Yg==
+  state: !!python/tuple
+  - 1
+  - !!python/tuple
+    - 6
+  - &id002 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - false
+  - !!binary |
+    8NDL11jdsb8jEPLIEwA+wNdxflzILCTAVGjTUXSciT/S2IlT5RR0v4zsmaXswmg/
+std: !!python/object/apply:numpy.core.multiarray._reconstruct
+  args:
+  - *id001
+  - !!python/tuple
+    - 0
+  - !!binary |
+    Yg==
+  state: !!python/tuple
+  - 1
+  - !!python/tuple
+    - 6
+  - *id002
+  - false
+  - !!binary |
+    FHH95L6b0T/0txAfo+fOP2TR3CE9jc8/v2Bh1trf2T8vAkKwQDjeP21T8s5pOOA/
